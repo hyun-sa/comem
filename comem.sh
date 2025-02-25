@@ -6,7 +6,7 @@ COMMAND=""
 OUTPUT="result.txt"
 
 
-while getopts "m:r:" opt; do
+while getopts "m:r:o:" opt; do
   case $opt in
     m) MEMORY=$OPTARG ;;
     r) COMMAND=$OPTARG ;;
