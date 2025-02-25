@@ -31,7 +31,7 @@ sudo useradd -m tmp_auto
 sudo mkdir -p /etc/systemd/system/user-.slice.d
 cat << EOF | sudo tee /etc/systemd/system/user-.slice.d/50-memory.conf > /dev/null
 [Slice]
-MemoryMax=2G
+MemoryMax=$MEMORY
 EOF
 sudo systemctl daemon-reload
 
