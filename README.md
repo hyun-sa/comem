@@ -7,7 +7,9 @@
 ```
 - Example
 
-`./comem.sh -m "2G" -r "7zr b -mmt32 -md26"`
+```
+./comem.sh -m "2G" -r "7zr b -mmt32 -md26"
+```
 =======
 - default 값으로 명령어의 실행 output은 result.txt에 저장됩니다.
 - 또한 swap 사용량을 측정하는 pswpin, pswpout 값은 실행후-실행전 값으로 측정되어 result.txt의 끝에 추가됩니다.
@@ -55,4 +57,3 @@ Avr:     74578  1747   4368  77156  |    1480608  2840   4506 129389
 Tot:            2293   4437 103273
 pswpin: 8034795, pswpout: 7336958
 ```
->>>>>>> Stashed changes
