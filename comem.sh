@@ -52,5 +52,7 @@ echo "job done, running post-task"
 sudo rm -rf /etc/systemd/system/user-.slice.d
 sudo systemctl daemon-reload
 sudo userdel -r tmp_auto
+sudo swapoff -a
+sudo swapon -a
 
 echo "all task done"
