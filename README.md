@@ -1,16 +1,6 @@
 ## COMEM : force the use of swap by COnstraining MEMory.
 - **COMEM**은 <u>swap을 강제하기 위해 제작된 bash script</u> 입니다.
 - **cgroup v2**를 기반으로 만들어져 있으며, 사용시 **sudo** 권한이 필요합니다.
-<<<<<<< Updated upstream
-```
-[usage] ./comem.sh -m "memory" -r "something you want to run" [-o] "output, default: result.txt"
-```
-- Example
-
-```
-./comem.sh -m "2G" -r "7zr b -mmt32 -md26"
-```
-=======
 - default 값으로 명령어의 실행 output은 result.txt에 저장됩니다.
 - 또한 swap 사용량을 측정하는 pswpin, pswpout 값은 실행후-실행전 값으로 측정되어 result.txt의 끝에 추가됩니다.
 ```
