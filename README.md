@@ -1,10 +1,11 @@
 ## COMEM : force the use of swap by COnstraining MEMory.
-- **COMEM**은 <u>swap을 강제하는 상황을 만들기 위해 제작된 bash script</u> 입니다.
-- **cgroup v2**를 기반으로 만들어져 있으며, 사용시 **sudo** 권한이 필요합니다.
-- default 값으로 명령어의 실행 output은 result.txt에 저장됩니다.
-- 또한 swap 사용량을 측정하는 pswpin, pswpout 값을 실행후-실행전 값으로 측정하어 output의 끝에 추가합니다.
-- 전체적인 실행시간을 ms단위로 측정하여 output의 끝에 추가합니다.
-- t 옵션을 통해 해당 명령어를 n번 반복실행할 수 있으며, 해당 옵션을 활성화할시 실행시간, pswpin, pswpout의 평균, 최소, 최대값을 output의 끝에 추가합니다.
+
+- **COMEM** is a **bash script** designed to <u>create situations to force a swap.</u>
+- It is based on **cgroup v2** and requires **root** privileges to use.
+- By default, the output of the command's execution is stored in result.txt.
+- It also measures the pswpin and pswpout values, which measure swap usage, as post-run-to-pre-run values, and add them to the end of output.
+- Measure the overall execution time in ms and add it to the end of output.
+- The -t option allows the command to be executed n times, and appends the average, minimum, and maximum values of execution time, pswpin, and pswpout to the end of output when enabled.
 ```
 [usage] ./comem.sh
   -m "Memory constraint, e.g. 2G"
@@ -12,6 +13,8 @@
   [-o "Output destination, default: result.txt"]
   [-t "Execution repeat times, default: 1"]
 ```
+### Sturct figure
+![Image](https://github.com/user-attachments/assets/3c298664-7f0e-40c3-9862-2222fe02b8fd)
 ### Running example (7-zip Benchmark)
 
 ```
