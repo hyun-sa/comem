@@ -29,7 +29,7 @@ while getopts "m:r:o:t:" opt; do
     o) OUTPUT=$OPTARG ;;
     t) TIMES=$OPTARG ;;
     *)
-      echo "Usage: sudo $0 -m <memory> -r <command> [-o <output_file>] [-t <repetitions>]"
+      echo "Usage: sudo $0 -m <memory> -r <command> [-o <output_file>] [-t <repetitions>] [--tiered]"
       echo "  -m: Memory limit (e.g., 2G, 512M)"
       echo "  -r: Command to execute (wrap in quotes, e.g., \"7zr b\")"
       echo "  -o: Output file for results (default: result.txt)"
